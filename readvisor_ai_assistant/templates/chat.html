@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}AI Assistant{% endblock %}
+{% block content %}
+
+
+
+<!-- chat area -->
+<div class="col-xxl-6 col-xl-12 order-xl-2">
+    <div class="card">
+        <div class="card-body px-0 pb-0">
+            <ul class="conversation-list px-3" data-simplebar="init" style="max-height: 554px">
+                <div class="simplebar-wrapper" style="margin: 0px -24px;">
+                    <div class="simplebar-height-auto-observer-wrapper">
+                        <div class="simplebar-height-auto-observer"></div>
+                    </div>
+                    <div class="simplebar-mask">
+                        <div class="simplebar-offset" style="right: 0px; bottom: 0px;">
+                            <div class="simplebar-content-wrapper" tabindex="0" role="region"
+                                aria-label="scrollable content" style="height: auto; overflow: hidden scroll;">
+                                <div id="chat-messages" class="simplebar-content" style="padding: 0px 24px;">
+                                    <!-- -->
+                                </div>
+                                </li>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="simplebar-placeholder" style="width: auto; height: 876px;"></div>
+        </div>
+        <div class="simplebar-track simplebar-horizontal" style="visibility: hidden;">
+            <div class="simplebar-scrollbar" style="width: 0px; display: none;"></div>
+        </div>
+        <div class="simplebar-track simplebar-vertical" style="visibility: visible;">
+            <div class="simplebar-scrollbar"
+                style="height: 350px; transform: translate3d(0px, 204px, 0px); display: block;"></div>
+        </div>
+        </ul>
+    </div> <!-- end card-body -->
+    <div class="card-body p-0">
+        <div class="row">
+            <div class="col">
+                <div class="mt-2 bg-light p-3">
+                    <div class="needs-validation" novalidate="" name="chat-form" id="chat-form"> <!-- TODO -->
+                        <div class="row">
+                            <div class="col mb-2 mb-sm-0">
+                                <input type="text" class="form-control border-0" placeholder="Enter your text"
+                                    required="" name="message-form" id="msg">
+                                <div class="invalid-feedback">
+                                    Please enter your message
+                                </div>
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="btn-group">
+                                    <a href="#" class="btn btn-light"><i class="uil uil-paperclip"></i></a>
+                                    <a href="#" class="btn btn-light"> <i class="uil uil-smile"></i> </a>
+                                    <div class="d-grid">
+                                        <button type="submit" class="btn btn-success chat-send"><i
+                                                class="uil uil-message" id="send-msg"></i></button>
+                                    </div>
+                                </div>
+                            </div> <!-- end col -->
+                        </div> <!-- end row-->
+                    </div>
+                </div>
+            </div> <!-- end col-->
+        </div>
+        <!-- end row -->
+    </div>
+</div> <!-- end card -->
+<!-- end chat area-->
+
+{% endblock %}

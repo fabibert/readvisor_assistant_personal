@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>re:spondelligent</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+        <meta content="Coderthemes" name="author" />
+        <!-- App favicon -->
+        <link rel="shortcut icon" href="../static/assets/images/logo-icon.png">
+
+        <!-- google fonts -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+         <!-- third party css -->
+         <link href="../static/assets/css/vendor/britecharts.min.css" rel="stylesheet" type="text/css" />
+
+        <!-- App css -->
+        <link href="../static/assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../static/assets/css/app.min.css" rel="stylesheet" type="text/css" id="light-style" />
+        <link href="../static/assets/css/app-dark.min.css" rel="stylesheet" type="text/css" id="dark-style" />
+        <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script> <!-- TODO added -->
+
+    </head>
+
+    <body class="loading" data-layout-config='{"leftSideBarTheme":"dark","layoutBoxed":false, "leftSidebarCondensed":false, "leftSidebarScrollable":false,"darkMode":false, "showRightSidebarOnStart": true}'>
+        <!-- Begin page -->
+        <div class="wrapper">
+            <!-- ========== Left Sidebar Start ========== -->
+            <div class="left-side-menu">
+
+                <!-- LOGO -->
+                <a href="dashboard.html" class="logo text-center logo-light">
+                    <span class="logo-lg">
+                        <img src="../static/assets/images/logo.svg" alt="re:spondelligent" height="36">
+                    </span>
+                    <span class="logo-sm">
+                        <img src="../static/assets/images/logo_sm.svg" alt="re:spondelligent" height="30">
+                    </span>
+                </a>
+
+                <!-- LOGO -->
+                <a href="dashboard.html" class="logo text-center logo-dark">
+                    <span class="logo-lg">
+                        <img src="../static/assets/images/logo.svg" alt="re:spondelligent" height="36">
+                    </span>
+                    <span class="logo-sm">
+                        <img src="../static/assets/images/logo_sm.svg" alt="re:spondelligent" height="30">
+                    </span>
+                </a>
+
+                <div class="h-100" id="left-side-menu-container" data-simplebar>
+
+                    <!--- Sidemenu -->
+                    <ul class="metismenu side-nav">
+
+                        <li class="side-nav-item">
+                            <a href="to-do.html" class="side-nav-link">
+                                <i class="uil-edit"> </i>
+                                <span>To-Do</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
+                                <i class="uil-arrow-growth"></i>
+                                <span> Statistics </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="statistics-reviews.html">Reviews</a>
+                                </li>
+                                <li>
+                                    <a href="statistics-responses.html">Responses</a>
+                                </li>
+                                <li>
+                                    <a href="statistics-rescore.html">Re:Score</a>
+                                </li>
+                            </ul>
+                        </li>
+<!--
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="mdi mdi-speedometer"></i>
+                                <span>reScore</span>
+                            </a>
+                        </li>
+-->
+                        <li class="side-nav-item">
+                            <a href="reviews.html" class="side-nav-link" >
+                                <i class="uil uil-comment-alt-lines"></i>
+                                <span> Reviews </span>
+                                <!--<span class="menu-arrow"></span>-->
+                            </a>
+                            <!--
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">16192</span>
+                                        <span>Alle</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">2516</span>
+                                        <span>Tripadvisor</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">637</span>
+                                        <span>Facebook</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">10035</span>
+                                        <span>Booking</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">258</span>
+                                        <span>Hotels</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">1730</span>
+                                        <span>Google</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">476</span>
+                                        <span>Holidaycheck</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">499</span>
+                                        <span>Expedia</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">
+                                        <span class="badge badge-secondary float-right">41</span>
+                                        <span>Airbnb</span>
+                                    </a>
+                                </li>
+                                
+                            </ul>
+                            -->
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
+                                <i class="uil-chart-line"></i>
+                                <span> Analytics </span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="analytics-content-analysis.html">Content Analysis</a>
+                                </li>
+                                <li>
+                                    <a href="analytics-trend-analysis.html">Trend Analysis</a>
+                                </li>
+                                <li>
+                                    <a href="analytics-word-cloud.html">Word Cloud</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="recommendations.html" class="side-nav-link">
+                                <i class="uil-lightbulb-alt"> </i>
+                                <span>Recommendations</span>
+                            </a>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
+                                <i class="mdi mdi-map-marker"></i>
+                                <span>My Venue</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="myvenue-response-details.html">Response Details</a>
+                                </li>
+                                <li>
+                                    <a href="myvenue-opening-hours.html">Opening Hours</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
+                                <i class="uil-graph-bar"></i>
+                                <span>Benchmarking</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="benchmarking-internal.html">Internal</a>
+                                </li>
+                                <li>
+                                    <a href="benchmarking-external.html">External</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                      
+<!-- 
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
+                                <i class="mdi mdi-cog"></i>
+                                <span>Einstellungen</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="javascript: void(0);">Benutzer</a>
+                                </li>
+                            </ul>
+                        </li>
+-->   
+<!--
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link">
+                                <i class="mdi mdi-view-dashboard"></i>
+                                <span>Admin</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="javascript: void(0);">Benutzer</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">Gruppen</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">Eigenschaften</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">Reviewanswer</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">Review</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">Plattform</a>
+                                </li>
+                                <li>
+                                    <a href="javascript: void(0);">Classify</a>
+                                </li>
+                            </ul>
+                        </li>
+
+--->
+                        <li class="side-nav-item">
+                            <a href="javascript: void(0);" class="side-nav-link" aria-expanded="false">
+                                <i class="uil uil-share-alt"></i>
+                                <span>Integration</span>
+                                <span class="menu-arrow"></span>
+                            </a>
+                            <ul class="side-nav-second-level mm-collapse" aria-expanded="false">
+                                <li>
+                                    <a href="integration-widget.html">Widget</a>
+                                </li>
+                                <li>
+                                    <a href="integration-marketplace.html">Marketplace</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="side-nav-item">
+                            <a href="reporting.html" class="side-nav-link">
+                                <i class="uil-clipboard-alt"></i>
+                                <span>Reporting</span>
+                            </a>
+                        </li>
+                        <li class="side-nav-item">
+                            <a href="/" class="side-nav-link">
+                                <i class="uil-chat"></i>
+                                <span>AI Assistant</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                    <!--- End Sidemenu -->
+
+                    <!-- End Sidebar -->
+
+                    <div class="clearfix"></div>
+
+                </div>
+                <!-- Sidebar -left -->
+
+            </div>
+            <!-- Left Sidebar End -->
+
+
+            <!-- ============================================================== -->
+            <!-- Start Page Content here -->
+            <!-- ============================================================== -->
+
+            <div class="content-page">
+                <div class="content">
+                    <!-- Topbar Start -->
+                    <div class="navbar-custom">
+                        <ul class="list-unstyled topbar-right-menu float-right mb-0"> 
+                            <li class="total-score d-none d-md-flex">
+                                <img class="tiny-logo" src="../static/assets/images/re_logo_32x24.svg" alt="re" height="24">
+                                <div class="total-score-text">Score: 84.0 <span class="arrow">&#8595;</span></div>
+                            </li>
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle arrow-none" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                    <i class="dripicons-bell noti-icon"></i>
+                                    <span class="noti-icon-badge"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated dropdown-lg">
+
+                                    <!-- item-->
+                                    <div class="dropdown-item noti-title">
+                                        <h5 class="m-0">
+                                            <span class="float-right">
+                                                <a href="javascript: void(0);" class="text-dark">
+                                                    <small>Clear All</small>
+                                                </a>
+                                            </span>Notification
+                                        </h5>
+                                    </div>
+
+                                    <div style="max-height: 230px;" data-simplebar>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-primary">
+                                                <i class="mdi mdi-comment-account-outline"></i>
+                                            </div>
+                                            <p class="notify-details">REMINDER: Any new dishes?
+                                                <small class="text-muted">1 min ago</small>
+                                            </p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-info">
+                                                <i class="mdi mdi-account-plus"></i>
+                                            </div>
+                                            <p class="notify-details">New competitor in the city.
+                                                <small class="text-muted">5 hours ago</small>
+                                            </p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon">
+                                                <img src="../static/assets/images/users/avatar-2.jpg" class="img-fluid rounded-circle" alt="" /> </div>
+                                            <p class="notify-details">Author</p>
+                                            <p class="text-muted mb-0 user-msg">
+                                                <small>Hi, I wrote a new response for your declined answer.</small>
+                                            </p>
+                                        </a>
+
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-primary">
+                                                <i class="mdi mdi-comment-account-outline"></i>
+                                            </div>
+                                            <p class="notify-details">REMINDER: Your comment has expired.
+                                                <small class="text-muted">4 days ago</small>
+                                            </p>
+                                        </a>
+
+                                    <!-- All-->
+                                    <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item notify-all">
+                                        View All
+                                    </a>
+
+                                </div>
+                            </li>
+
+                            <li class="notification-list">
+                                <a class="nav-link right-bar-toggle" href="javascript: void(0);">
+                                    <i class="dripicons-gear noti-icon"></i>
+                                </a>
+                            </li>
+
+                            <li class="dropdown notification-list">
+                                <a class="nav-link dropdown-toggle nav-user arrow-none mr-0" data-toggle="dropdown" href="#" role="button" aria-haspopup="false"
+                                    aria-expanded="false">
+                                    <span class="account-user-avatar"> 
+                                        <img src="../static/assets/images/users/avatar-1.jpg" alt="user-image" class="rounded-circle">
+                                    </span>
+                                    <span>
+                                        <span class="account-user-name">Alex Zaugg</span>
+                                        <span class="account-position"> </span>
+                                    </span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-animated topbar-dropdown-menu profile-dropdown">
+                                    <!-- item-->
+                                    <div class=" dropdown-header noti-title">
+                                        <h6 class="text-overflow m-0">Welcome !</h6>
+                                    </div>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-account-circle mr-1"></i>
+                                        <span>My Account</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-account-edit mr-1"></i>
+                                        <span>Settings</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-lifebuoy mr-1"></i>
+                                        <span>Support</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-lock-outline mr-1"></i>
+                                        <span>Lock Screen</span>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                        <i class="mdi mdi-logout mr-1"></i>
+                                        <span>Logout</span>
+                                    </a>
+
+                                </div>
+                            </li>
+
+                        </ul>
+                        <button class="button-menu-mobile open-left disable-btn">
+                            <i class="mdi mdi-menu"></i>
+                        </button>
+                        <div class="navbar-custom-left-col">
+                            <div class="dropdown">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Palm Royale, Cairns
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Bon Appétit</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- end Topbar -->
+
+
+                    <!-- Start Content-->
+                    <div class="container-fluid">
+                        
+                        <!-- start page title -->
+                        <div class="row">
+                            <div class="col-12">
+                                <!-- start page title -->
+                                <div class="page-heading d-lg-flex justify-content-between align-items-center pt-2 pb-2">
+                                    <h4 class="page-heading-title">{% block title %}{% endblock %} </h4>
+                                    <div class="page-heading-right d-flex">
+                                    </div>
+                                </div>
+                                <!-- end page title -->
+                            </div>
+                        </div>     
+                        <div class="row"> {% block content %}{% endblock %}    </div>
+                        <!-- end page title -->     
+                                   
+                    </div> <!-- container -->
+
+                </div> <!-- content -->
+
+                <!-- Footer Start -->
+                <footer class="footer">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <strong>Copyright</strong> re:spondelligent GmbH © <script>document.write(new Date().getFullYear())</script>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="text-md-right footer-links d-none d-md-block">
+                                    <a href="javascript: void(0);">Support</a>
+                                    <span>+41 44 500 47 33</span>
+                                    <a href="javascript: void(0);">Legal and Privacy Policy</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+                <!-- end Footer -->
+
+
+            </div>
+
+            <!-- ============================================================== -->
+            <!-- End Page content -->
+            <!-- ============================================================== -->
+
+
+        </div>
+        <!-- END wrapper -->
+
+
+        <!-- Right Sidebar -->
+        <div class="right-bar">
+
+            <div class="rightbar-title">
+                <a href="javascript:void(0);" class="right-bar-toggle float-right">
+                    <i class="dripicons-cross noti-icon"></i>
+                </a>
+                <h5 class="m-0">Settings</h5>
+            </div>
+
+            <div class="rightbar-content h-100" data-simplebar>
+
+                <div class="p-3">
+                    <div class="alert alert-warning" role="alert">
+                        <strong>Customize </strong> the overall color scheme, sidebar menu, etc.
+                    </div>
+
+                    <!-- Settings -->
+                    <h5 class="mt-3">Color Scheme</h5>
+                    <hr class="mt-1" />
+
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="color-scheme-mode" value="light"
+                            id="light-mode-check" checked />
+                        <label class="custom-control-label" for="light-mode-check">Light Mode</label>
+                    </div>
+
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="color-scheme-mode" value="dark"
+                            id="dark-mode-check" />
+                        <label class="custom-control-label" for="dark-mode-check">Dark Mode</label>
+                    </div>
+
+                    <!-- Width -->
+                    <h5 class="mt-4">Width</h5>
+                    <hr class="mt-1" />
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="width" value="fluid" id="fluid-check" checked />
+                        <label class="custom-control-label" for="fluid-check">Fluid</label>
+                    </div>
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="width" value="boxed" id="boxed-check" />
+                        <label class="custom-control-label" for="boxed-check">Boxed</label>
+                    </div>
+
+                    <!-- Left Sidebar-->
+                    <h5 class="mt-4">Left Sidebar</h5>
+                    <hr class="mt-1" />
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="theme" value="default" id="default-check"
+                            checked />
+                        <label class="custom-control-label" for="default-check">Default</label>
+                    </div>
+
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="theme" value="light" id="light-check" />
+                        <label class="custom-control-label" for="light-check">Light</label>
+                    </div>
+
+                    <div class="custom-control custom-switch mb-3">
+                        <input type="radio" class="custom-control-input" name="theme" value="dark" id="dark-check" />
+                        <label class="custom-control-label" for="dark-check">Dark</label>
+                    </div>
+
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="compact" value="fixed" id="fixed-check"
+                            checked />
+                        <label class="custom-control-label" for="fixed-check">Fixed</label>
+                    </div>
+
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="compact" value="condensed"
+                            id="condensed-check" />
+                        <label class="custom-control-label" for="condensed-check">Condensed</label>
+                    </div>
+
+                    <div class="custom-control custom-switch mb-1">
+                        <input type="radio" class="custom-control-input" name="compact" value="scrollable"
+                            id="scrollable-check" />
+                        <label class="custom-control-label" for="scrollable-check">Scrollable</label>
+                    </div>
+
+                    <button class="btn btn-primary btn-block mt-4" id="resetBtn">Reset to Default</button>
+
+                    <a href="https://themes.getbootstrap.com/product/hyper-responsive-admin-dashboard-template/"
+                        class="btn btn-danger btn-block mt-3" target="_blank"><i class="mdi mdi-basket mr-1"></i> Purchase Now</a>
+                </div> <!-- end padding-->
+
+            </div>
+        </div>
+
+        <div class="rightbar-overlay"></div>
+        <!-- /Right-bar -->
+
+        <!-- demo:js -->
+        <script src="../static/assets/js/pages/demo.apex-radialbar.js"></script>
+
+        <!-- bundle -->
+        <script src="../static/assets/js/vendor.min.js"></script>
+        <script src="../static/assets/js/app.min.js"></script>
+
+        <!-- Apex charts js -->
+        <script src="../static/assets/js/vendor/apexcharts.min.js"></script>
+        <script src="../static/assets/js/pages/radial-chart.js"></script>
+            <script src="../static/assets/js/pages/answered-reviews.js"></script>
+        <script src="../static/assets/js/pages/rescore-trend.js"></script>
+        <!-- <script src="https://apexcharts.com/samples/../static/assets/stock-prices.js"></script> -->
+        <!-- <script src="https://apexcharts.com/samples/../static/assets/irregular-data-series.js"></script> -->
+        <script src="../static/assets/js/pages/init.apexchart.js" defer></script>
+
+        <!-- Brite charts js -->
+        <script src="../static/assets/js/vendor/d3.min.js" defer></script>
+        <script src="../static/assets/js/vendor/britecharts.min.js" defer></script>
+        <script src="../static/assets/js/pages/init.britechart.js" defer></script>
+        <script src="../static/assets/js/masterproject/socketIO.js"></script> <!-- TODO -->
+
+        <script>
+            //default date range picker
+            $('#dash-daterange').daterangepicker({
+                singleDatePicker: true
+            });
+        </script>
+
+    </body>
+</html>

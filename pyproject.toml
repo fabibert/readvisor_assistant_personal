@@ -1,0 +1,12 @@
+[project]
+name = "readvisor_ai_assistant"
+dynamic = ["version", "description"]
+dependencies = [
+    "flask",
+    "python-socketio",
+    "openai",
+]
+
+[build-system]
+requires = ["flit_core<4"]
+build-backend = "flit_core.buildapi"
